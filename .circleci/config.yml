@@ -21,9 +21,9 @@ jobs:
             - run:
                   name: Build
                   command: npm build
-            - run:
-                  name: Install Firebase Tools
-                  command: npm install -g firebase-tools
+            # - run:
+            #       name: Install Firebase Tools
+            #       command: npm install -g firebase-tools
             - run:
                   name: Firebase Deploy
-                  command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" --only hosting
+                  command: npx run firebase deploy deploy --token "$FIREBASE_TOKEN" --only hosting
